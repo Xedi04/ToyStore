@@ -1,0 +1,327 @@
+@import "mixin";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 0 32px;
+}
+
+//yasil-navbar
+
+#green {
+    width: 100%;
+    background-color: $green;
+    color: $white;
+
+    .green-1 {
+        @include mini;
+        justify-content: space-between;
+        padding: 7px 0;
+
+        .green-2 {
+            width: 25%;
+            @include flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 12px;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+        ul {
+            width: 13%;
+            @include flex;
+            list-style: none;
+
+            li {
+                border-radius: 50%;
+
+                i {
+                    font-size: 13px;
+                    padding: 6px;
+
+                    &:hover {
+                        border-radius: 50%;
+                        background-color: #8fa054;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//navbar
+
+#nav {
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    z-index: 1000;
+
+    .navbar {
+        @include mini;
+        padding: 20px 0;
+
+        .start {
+            width: 40%;
+            @include flex;
+            justify-content: space-between;
+
+            .start-1 {
+                h4 {
+                    font-size: 27px;
+                    font-family: $h4;
+                }
+            }
+
+            .start-2 {
+                width: 67%;
+                @include flex;
+                justify-content: space-between;
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+                    font-size: 17px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .cart {
+            width: 12%;
+            @include flex;
+            gap: 20px;
+
+            p {
+                font-size: 17px;
+            }
+
+            i {
+                font-size: 20px;
+            }
+
+            #circle {
+                // background-color: $green;
+                color: $green;
+            }
+
+            #list {
+                display: none;
+            }
+        }
+    }
+}
+
+// ILK SECTION 
+#open {
+    width: 100%;
+    background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baddd4835e113c6299a48f5_li-tzuni-507346-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+
+    .open-1 {
+        width: 100%;
+        @include flex;
+        padding: 150px 0;
+        flex-direction: column;
+position: relative;
+
+        .hello {
+            width: 45%;
+            background-color: $white;
+            border-radius: 20px;
+            @include flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 50px 70px;
+            gap: 20px;
+
+            p {
+                color: $green;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-family: $h4;
+            }
+
+            #catalog {
+                @include Button;
+            }
+        }
+        #mouse{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 0;
+            position: absolute;
+            bottom:-35px;
+            i{
+                font-size: 30px;
+                color: $grey;
+            };
+        }
+    }
+}
+
+
+//media - 990px
+
+@media screen and (max-width:990px) {
+    #green {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .green-1 {
+                width: 100%;
+
+                .green-2 {
+                    width: 31%;
+                }
+            }
+        }
+    }
+
+    #nav {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .navbar {
+                width: 100%;
+
+                .start {
+                    .start-2 {
+                        display: none;
+                    }
+                }
+
+                .cart {
+                    width: 16%;
+
+                    #list {
+                        display: block;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }
+
+// ILK SECTION 
+
+    #open {
+        width: 100%;
+        .container{
+            padding: 0 20px;
+            .open-1{
+                width: 100%;
+                .hello{
+                    width: 55%;
+                    padding: 50px;
+                    h1{
+                        font-size: 33px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media - 700px
+
+@media screen and (max-width:700px) {
+    #green {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .green-1 {
+                width: 100%;
+
+                .green-2 {
+                    width: 45%;
+                }
+
+                ul {
+                    padding-right: 20px;
+                }
+
+                ;
+            }
+        }
+    }
+
+    #nav {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .navbar {
+                width: 100%;
+
+                .start {
+                    .start-1 {
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .start-2 {
+                        display: none;
+                    }
+                }
+
+                .cart {
+                    width: 24%;
+
+                    #list {
+                        display: block;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }
+
+// ILK SECTION
+
+    #open {
+        width: 100%;
+        .container{
+            padding: 0 20px;
+            .open-1{
+                width: 100%;
+                .hello{
+                    width: 80%;
+                    padding: 50px 70px;
+                    h1{
+                        font-size: 33px;
+                    }
+                }
+            }
+        }
+    }
+}
