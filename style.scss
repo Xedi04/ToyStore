@@ -14,9 +14,6 @@
     padding: 0 32px;
 }
 
-//yasil-navbar
-
-
 //navbar
 
 #nav {
@@ -25,52 +22,53 @@
     position: fixed;
     z-index: 1000;
 
-    
-#green {
-    width: 100%;
-    background-color: $green;
-    color: $white;
 
-    .green-1 {
-        @include mini;
-        justify-content: space-between;
-        padding: 7px 0;
+    #green {
+        width: 100%;
+        background-color: $green;
+        color: $white;
 
-        .green-2 {
-            width: 25%;
-            @include flex;
+        .green-1 {
+            @include mini;
             justify-content: space-between;
+            padding: 7px 0;
 
-            p {
-                font-size: 12px;
+            .green-2 {
+                width: 300px;
+                @include flex;
+                justify-content: space-between;
 
-                a {
-                    color: $white;
+                p {
+                    font-size: 12px;
+
+                    a {
+                        color: $white;
+                    }
                 }
             }
-        }
 
-        ul {
-            width: 13%;
-            @include flex;
-            list-style: none;
+            ul {
+                width: 100px;
+                @include flex;
+                list-style: none;
 
-            li {
-                border-radius: 50%;
+                li {
+                    border-radius: 50%;
 
-                i {
-                    font-size: 13px;
-                    padding: 6px;
+                    i {
+                        font-size: 13px;
+                        padding: 6px;
 
-                    &:hover {
-                        border-radius: 50%;
-                        background-color: #8fa054;
+                        &:hover {
+                            border-radius: 50%;
+                            background-color: #8fa054;
+                        }
                     }
                 }
             }
         }
     }
-}
+
     .navbar {
         @include mini;
         padding: 20px 0;
@@ -84,6 +82,7 @@
                 h4 {
                     font-size: 27px;
                     font-family: $h4;
+                    font-weight: 400;
                 }
             }
 
@@ -125,7 +124,29 @@
             #list {
                 display: none;
             }
+
+    
         }
+
+    }
+    .panel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding:40px 20px;
+        background-color: white;
+        overflow: hidden;
+       .ii{
+        border-bottom: 1px solid $green;
+        p{
+            font-size: 18px;
+        }
+       }
+    }
+
+    .n {
+        display: none;
     }
 }
 
@@ -141,7 +162,7 @@
         @include flex;
         padding: 150px 0;
         flex-direction: column;
-position: relative;
+        position: relative;
 
         .hello {
             width: 45%;
@@ -161,23 +182,194 @@ position: relative;
             h1 {
                 font-size: 40px;
                 font-family: $h4;
+                font-weight: 400;
             }
 
             #catalog {
                 @include Button;
             }
         }
-        #mouse{
+
+        #mouse {
             width: 70px;
             height: 70px;
             border-radius: 50%;
             border: 0;
             position: absolute;
-            bottom:-35px;
-            i{
+            bottom: -35px;
+
+            i {
                 font-size: 30px;
                 color: $grey;
-            };
+            }
+
+            ;
+        }
+    }
+}
+
+// MODAL CLICK
+
+// IKINCI SECTION 
+
+#toys {
+    width: 100%;
+
+    .wood {
+        @include mini;
+        padding: 150px 0;
+
+        .wood-1 {
+            width: 48%;
+            border-radius: 20px;
+            background-color: $yellow;
+            @include flex;
+            justify-content: space-around;
+
+            img {
+                width: 220px;
+                margin-top: -90px;
+            }
+
+            .toys-1 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 50px 40px 50px 0;
+
+                h2 {
+                    font-size: 28px;
+                    font-family: $h4;
+                    color: white;
+                    font-weight: 400;
+                }
+
+                #t {
+                    @include Button;
+                    background-color: $white;
+                    color: $black;
+                    width: 120px;
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+        .wood-2 {
+            width: 48%;
+            border-radius: 20px;
+            background-color: $pink;
+            @include flex;
+            justify-content: space-around;
+
+            img {
+                width: 220px;
+                margin-top: -90px;
+            }
+
+            .toys-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 50px 0 50px 40px;
+
+                h2 {
+                    font-size: 28px;
+                    font-family: $h4;
+                    color: white;
+                    font-weight: 400;
+                    margin-right: 0
+                }
+
+                #t {
+                    @include Button;
+                    background-color: $white;
+                    color: $black;
+                    width: 120px;
+                    font-size: 13px;
+                    margin-left: 50px;
+
+                }
+            }
+
+        }
+
+
+    }
+}
+
+//UCUNCU SECTION 
+
+
+.animals{
+    width: 100%;
+    .stuffed{
+        @include mini;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+        .anml-1{
+            width: 100%;
+            @include flex;
+            justify-content: space-between;
+            h2 {
+                font-size: 28px;
+                font-family: $h4;
+                font-weight: 400;
+            }
+            .see{
+                font-size: 13px;
+               text-align: center;
+               border-bottom: 2px solid rgb(223, 220, 220);
+               cursor: pointer;
+               font-family: $h4;
+               &:hover{
+                border-bottom: 2px solid $green;
+               }
+            }
+        }
+        .teddy{
+            width: 100%;
+            background-color:rgb(223, 220, 220);
+            .bear{
+                width: 15%;
+                height: 2px;
+                background-color: $green;
+            }
+        }
+        .mega{
+            width: 100%;
+            @include flex;
+            justify-content: space-between;
+
+            .cute{
+                width: 23%;
+                background-color:rgb(233, 239, 239);
+                @include flex;
+                flex-direction: column;
+                padding: 20px 0;
+                border-radius: 20px;
+                gap: 30px;
+                transition: transform 0.9s ease;
+              
+                img{
+                    width: 170px;
+                }
+              
+                .price{
+                    width: 100px;
+                    background-color: $green;
+                    font-size: 14px;
+                    color: $white;
+                    padding: 4px;
+                    text-align: center;
+                    border-radius: 30px;
+                }
+                &:hover{
+                    transform:scale(1.1) ;
+                    box-shadow: 0 0 5px 1px rgb(208, 207, 207);
+                }
+            }
         }
     }
 }
@@ -186,24 +378,22 @@ position: relative;
 //media - 990px
 
 @media screen and (max-width:990px) {
-    #green {
-        width: 100%;
 
-        .container {
-            padding: 0 20px;
-
-            .green-1 {
-                width: 100%;
-
-                .green-2 {
-                    width: 31%;
-                }
-            }
-        }
-    }
 
     #nav {
         width: 100%;
+
+        #green {
+            width: 100%;
+
+            .container {
+                padding: 0 20px;
+
+                .green-1 {
+                    width: 100%;
+                }
+            }
+        }
 
         .container {
             padding: 0 20px;
@@ -218,7 +408,7 @@ position: relative;
                 }
 
                 .cart {
-                    width: 16%;
+                    width: 20%;
 
                     #list {
                         display: block;
@@ -229,19 +419,238 @@ position: relative;
         }
     }
 
-// ILK SECTION 
+    // ILK SECTION 
 
     #open {
         width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .open-1 {
+                width: 100%;
+
+                .hello {
+                    width: 55%;
+                    padding: 40px 60px;
+
+                    h1 {
+                        font-size: 33px;
+                    }
+                }
+
+                #mouse {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // IKINCI SECTION 
+
+
+    #toys {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+            @include flex;
+
+            .wood {
+                width: 100%;
+                flex-direction: column;
+                gap: 70px;
+
+                .wood-1 {
+                    width: 55%;
+
+                    img {
+                        width: 180px;
+                    }
+
+                    .toys-1 {
+                        padding: 40px 40px 30px 0;
+
+                        h2 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+
+                .wood-2 {
+                    width: 55%;
+
+                    img {
+                        width: 180px;
+                    }
+
+                    .toys-2 {
+                        padding: 40px 0 30px 40px;
+
+                        h2 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //UCUNCU SECTION 
+
+    .animals{
+        width: 100%;
         .container{
             padding: 0 20px;
-            .open-1{
+            .stuffed{
                 width: 100%;
-                .hello{
-                    width: 55%;
-                    padding: 50px;
-                    h1{
+                .mega{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    padding: 0 20px;
+                    .cute{
+                        width: 47.8%;
+                        img{
+                            width: 270px;
+                        }
+                        &:hover{
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//media - 760px 
+
+
+@media screen and (max-width:760px) {
+
+
+    #nav {
+        width: 100%;
+
+        #green {
+            width: 100%;
+
+            .container {
+                padding: 0 20px;
+
+                .green-1 {
+                    width: 100%;
+                }
+            }
+        }
+
+        .container {
+            padding: 0 20px;
+
+            .navbar {
+                width: 100%;
+
+                .start {
+                    .start-2 {
+                        display: none;
+                    }
+                }
+
+                .cart {
+                    width: 140px;
+
+                    #list {
+                        display: block;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }
+
+    #open {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .open-1 {
+                width: 100%;
+
+                .hello {
+                    width: 70%;
+                    padding: 40px 60px;
+
+                    h1 {
                         font-size: 33px;
+                    }
+                }
+            }
+        }
+    }
+
+    #toys {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+            @include flex;
+
+            .wood {
+                width: 100%;
+                flex-direction: column;
+                gap: 70px;
+
+                .wood-1 {
+                    width: 70%;
+
+                    img {
+                        width: 180px;
+                    }
+
+                    .toys-1 {
+                        padding: 40px 30px 30px 0;
+                    }
+                }
+
+                .wood-2 {
+                    width: 70%;
+
+                    img {
+                        width: 180px;
+                    }
+
+                    .toys-2 {
+                        padding: 40px 0 30px 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    //UCUNCU SECTION 
+
+    .animals{
+        width: 100%;
+        .container{
+            padding: 0 20px;
+            .stuffed{
+                width: 100%;
+                .mega{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0 ;
+                    .cute{
+                        width: 49%;
+                        img{
+                            width: 270px;
+                        }
+                        &:hover{
+                            transform: scale(1);
+                        }
                     }
                 }
             }
@@ -249,33 +658,25 @@ position: relative;
     }
 }
 
-// media - 700px
 
-@media screen and (max-width:700px) {
-    #green {
-        width: 100%;
+// MEDIA -576px
 
-        .container {
-            padding: 0 20px;
-
-            .green-1 {
-                width: 100%;
-
-                .green-2 {
-                    width: 45%;
-                }
-
-                ul {
-                    padding-right: 20px;
-                }
-
-                ;
-            }
-        }
-    }
+@media screen and (max-width:576px) {
 
     #nav {
         width: 100%;
+
+        #green {
+            width: 100%;
+
+            .container {
+                padding: 0 20px;
+
+                .green-1 {
+                    width: 100%;
+                }
+            }
+        }
 
         .container {
             padding: 0 20px;
@@ -296,7 +697,7 @@ position: relative;
                 }
 
                 .cart {
-                    width: 24%;
+                    width: 140px;
 
                     #list {
                         display: block;
@@ -307,19 +708,94 @@ position: relative;
         }
     }
 
-// ILK SECTION
+    // ILK SECTION
 
     #open {
         width: 100%;
+
+        .container {
+            padding: 0 40px;
+
+            .open-1 {
+                width: 100%;
+
+                .hello {
+                    width: 100%;
+                    padding: 30px 60px;
+
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    // IKINCI SECTION 
+
+    #toys {
+        width: 100%;
+
+        .container {
+            padding: 0 40px;
+            @include flex;
+
+            .wood {
+                width: 100%;
+                flex-direction: column;
+                gap: 70px;
+
+                .wood-1 {
+                    width: 100%;
+
+                    img {
+                        width: 160px;
+                        //margin-top: -90px;
+                    }
+
+                    .toys-1 {
+                        padding: 40px 60px 30px 0;
+                    }
+                }
+
+                .wood-2 {
+                    width: 100%;
+
+                    img {
+                        width: 160px;
+                        // margin-top: -60px;
+                    }
+
+                    .toys-2 {
+
+                        padding: 40px 0 30px 70px;
+                    }
+                }
+            }
+        }
+    }
+
+    //UCUNCU SECTION 
+
+    .animals{
+        width: 100%;
         .container{
             padding: 0 20px;
-            .open-1{
+            .stuffed{
                 width: 100%;
-                .hello{
-                    width: 80%;
-                    padding: 50px 70px;
-                    h1{
-                        font-size: 33px;
+                .mega{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0 ;
+                    .cute{
+                        width: 48%;
+                        img{
+                            width: 170px;
+                        }
+                        &:hover{
+                            transform: scale(1);
+                        }
                     }
                 }
             }

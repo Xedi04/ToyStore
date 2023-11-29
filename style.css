@@ -32,7 +32,7 @@
   padding: 7px 0;
 }
 #nav #green .green-1 .green-2 {
-  width: 25%;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,7 @@
   color: white;
 }
 #nav #green .green-1 ul {
-  width: 13%;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,7 @@
 #nav .navbar .start .start-1 h4 {
   font-size: 27px;
   font-family: "Varela Round", sans-serif;
+  font-weight: 400;
 }
 #nav .navbar .start .start-2 {
   width: 67%;
@@ -113,6 +114,24 @@
   color: #a5c926;
 }
 #nav .navbar .cart #list {
+  display: none;
+}
+#nav .panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: white;
+  overflow: hidden;
+}
+#nav .panel .ii {
+  border-bottom: 1px solid #a5c926;
+}
+#nav .panel .ii p {
+  font-size: 18px;
+}
+#nav .n {
   display: none;
 }
 
@@ -150,6 +169,7 @@
 #open .open-1 .hello h1 {
   font-size: 40px;
   font-family: "Varela Round", sans-serif;
+  font-weight: 400;
 }
 #open .open-1 .hello #catalog {
   height: 48px;
@@ -181,20 +201,203 @@
   color: #999;
 }
 
+#toys {
+  width: 100%;
+}
+#toys .wood {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 150px 0;
+}
+#toys .wood .wood-1 {
+  width: 48%;
+  border-radius: 20px;
+  background-color: #ffc12c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+#toys .wood .wood-1 img {
+  width: 220px;
+  margin-top: -90px;
+}
+#toys .wood .wood-1 .toys-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 40px 50px 0;
+}
+#toys .wood .wood-1 .toys-1 h2 {
+  font-size: 28px;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  font-weight: 400;
+}
+#toys .wood .wood-1 .toys-1 #t {
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  background-color: white;
+  color: black;
+  width: 120px;
+  font-size: 13px;
+}
+#toys .wood .wood-1 .toys-1 #t:hover {
+  box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
+  transform: scale(1.05);
+}
+#toys .wood .wood-2 {
+  width: 48%;
+  border-radius: 20px;
+  background-color: #fb416b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+#toys .wood .wood-2 img {
+  width: 220px;
+  margin-top: -90px;
+}
+#toys .wood .wood-2 .toys-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 0 50px 40px;
+}
+#toys .wood .wood-2 .toys-2 h2 {
+  font-size: 28px;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  font-weight: 400;
+  margin-right: 0;
+}
+#toys .wood .wood-2 .toys-2 #t {
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  background-color: white;
+  color: black;
+  width: 120px;
+  font-size: 13px;
+  margin-left: 50px;
+}
+#toys .wood .wood-2 .toys-2 #t:hover {
+  box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
+  transform: scale(1.05);
+}
+
+.animals {
+  width: 100%;
+}
+.animals .stuffed {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 0;
+}
+.animals .stuffed .anml-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.animals .stuffed .anml-1 h2 {
+  font-size: 28px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+}
+.animals .stuffed .anml-1 .see {
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 2px solid rgb(223, 220, 220);
+  cursor: pointer;
+  font-family: "Varela Round", sans-serif;
+}
+.animals .stuffed .anml-1 .see:hover {
+  border-bottom: 2px solid #a5c926;
+}
+.animals .stuffed .teddy {
+  width: 100%;
+  background-color: rgb(223, 220, 220);
+}
+.animals .stuffed .teddy .bear {
+  width: 15%;
+  height: 2px;
+  background-color: #a5c926;
+}
+.animals .stuffed .mega {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.animals .stuffed .mega .cute {
+  width: 23%;
+  background-color: rgb(233, 239, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+  border-radius: 20px;
+  gap: 30px;
+  transition: transform 0.9s ease;
+}
+.animals .stuffed .mega .cute img {
+  width: 170px;
+}
+.animals .stuffed .mega .cute .price {
+  width: 100px;
+  background-color: #a5c926;
+  font-size: 14px;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  border-radius: 30px;
+}
+.animals .stuffed .mega .cute:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px 1px rgb(208, 207, 207);
+}
+
 @media screen and (max-width: 990px) {
-  #green {
+  #nav {
     width: 100%;
   }
-  #green .container {
+  #nav #green {
+    width: 100%;
+  }
+  #nav #green .container {
     padding: 0 20px;
   }
-  #green .container .green-1 {
-    width: 100%;
-  }
-  #green .container .green-1 .green-2 {
-    width: 31%;
-  }
-  #nav {
+  #nav #green .container .green-1 {
     width: 100%;
   }
   #nav .container {
@@ -207,7 +410,7 @@
     display: none;
   }
   #nav .container .navbar .cart {
-    width: 16%;
+    width: 20%;
   }
   #nav .container .navbar .cart #list {
     display: block;
@@ -224,29 +427,88 @@
   }
   #open .container .open-1 .hello {
     width: 55%;
-    padding: 50px;
+    padding: 40px 60px;
   }
   #open .container .open-1 .hello h1 {
     font-size: 33px;
   }
-}
-@media screen and (max-width: 700px) {
-  #green {
+  #open .container .open-1 #mouse {
+    display: none;
+  }
+  #toys {
     width: 100%;
   }
-  #green .container {
+  #toys .container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #toys .container .wood {
+    width: 100%;
+    flex-direction: column;
+    gap: 70px;
+  }
+  #toys .container .wood .wood-1 {
+    width: 55%;
+  }
+  #toys .container .wood .wood-1 img {
+    width: 180px;
+  }
+  #toys .container .wood .wood-1 .toys-1 {
+    padding: 40px 40px 30px 0;
+  }
+  #toys .container .wood .wood-1 .toys-1 h2 {
+    font-size: 25px;
+  }
+  #toys .container .wood .wood-2 {
+    width: 55%;
+  }
+  #toys .container .wood .wood-2 img {
+    width: 180px;
+  }
+  #toys .container .wood .wood-2 .toys-2 {
+    padding: 40px 0 30px 40px;
+  }
+  #toys .container .wood .wood-2 .toys-2 h2 {
+    font-size: 25px;
+  }
+  .animals {
+    width: 100%;
+  }
+  .animals .container {
     padding: 0 20px;
   }
-  #green .container .green-1 {
+  .animals .container .stuffed {
     width: 100%;
   }
-  #green .container .green-1 .green-2 {
-    width: 45%;
+  .animals .container .stuffed .mega {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
   }
-  #green .container .green-1 ul {
-    padding-right: 20px;
+  .animals .container .stuffed .mega .cute {
+    width: 47.8%;
   }
+  .animals .container .stuffed .mega .cute img {
+    width: 270px;
+  }
+  .animals .container .stuffed .mega .cute:hover {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 760px) {
   #nav {
+    width: 100%;
+  }
+  #nav #green {
+    width: 100%;
+  }
+  #nav #green .container {
+    padding: 0 20px;
+  }
+  #nav #green .container .green-1 {
     width: 100%;
   }
   #nav .container {
@@ -255,14 +517,11 @@
   #nav .container .navbar {
     width: 100%;
   }
-  #nav .container .navbar .start .start-1 h4 {
-    font-size: 20px;
-  }
   #nav .container .navbar .start .start-2 {
     display: none;
   }
   #nav .container .navbar .cart {
-    width: 24%;
+    width: 140px;
   }
   #nav .container .navbar .cart #list {
     display: block;
@@ -278,10 +537,171 @@
     width: 100%;
   }
   #open .container .open-1 .hello {
-    width: 80%;
-    padding: 50px 70px;
+    width: 70%;
+    padding: 40px 60px;
   }
   #open .container .open-1 .hello h1 {
     font-size: 33px;
+  }
+  #toys {
+    width: 100%;
+  }
+  #toys .container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #toys .container .wood {
+    width: 100%;
+    flex-direction: column;
+    gap: 70px;
+  }
+  #toys .container .wood .wood-1 {
+    width: 70%;
+  }
+  #toys .container .wood .wood-1 img {
+    width: 180px;
+  }
+  #toys .container .wood .wood-1 .toys-1 {
+    padding: 40px 30px 30px 0;
+  }
+  #toys .container .wood .wood-2 {
+    width: 70%;
+  }
+  #toys .container .wood .wood-2 img {
+    width: 180px;
+  }
+  #toys .container .wood .wood-2 .toys-2 {
+    padding: 40px 0 30px 40px;
+  }
+  .animals {
+    width: 100%;
+  }
+  .animals .container {
+    padding: 0 20px;
+  }
+  .animals .container .stuffed {
+    width: 100%;
+  }
+  .animals .container .stuffed .mega {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+  }
+  .animals .container .stuffed .mega .cute {
+    width: 49%;
+  }
+  .animals .container .stuffed .mega .cute img {
+    width: 270px;
+  }
+  .animals .container .stuffed .mega .cute:hover {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 576px) {
+  #nav {
+    width: 100%;
+  }
+  #nav #green {
+    width: 100%;
+  }
+  #nav #green .container {
+    padding: 0 20px;
+  }
+  #nav #green .container .green-1 {
+    width: 100%;
+  }
+  #nav .container {
+    padding: 0 20px;
+  }
+  #nav .container .navbar {
+    width: 100%;
+  }
+  #nav .container .navbar .start .start-1 h4 {
+    font-size: 20px;
+  }
+  #nav .container .navbar .start .start-2 {
+    display: none;
+  }
+  #nav .container .navbar .cart {
+    width: 140px;
+  }
+  #nav .container .navbar .cart #list {
+    display: block;
+    font-size: 23px;
+  }
+  #open {
+    width: 100%;
+  }
+  #open .container {
+    padding: 0 40px;
+  }
+  #open .container .open-1 {
+    width: 100%;
+  }
+  #open .container .open-1 .hello {
+    width: 100%;
+    padding: 30px 60px;
+  }
+  #open .container .open-1 .hello h1 {
+    font-size: 30px;
+  }
+  #toys {
+    width: 100%;
+  }
+  #toys .container {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #toys .container .wood {
+    width: 100%;
+    flex-direction: column;
+    gap: 70px;
+  }
+  #toys .container .wood .wood-1 {
+    width: 100%;
+  }
+  #toys .container .wood .wood-1 img {
+    width: 160px;
+  }
+  #toys .container .wood .wood-1 .toys-1 {
+    padding: 40px 60px 30px 0;
+  }
+  #toys .container .wood .wood-2 {
+    width: 100%;
+  }
+  #toys .container .wood .wood-2 img {
+    width: 160px;
+  }
+  #toys .container .wood .wood-2 .toys-2 {
+    padding: 40px 0 30px 70px;
+  }
+  .animals {
+    width: 100%;
+  }
+  .animals .container {
+    padding: 0 20px;
+  }
+  .animals .container .stuffed {
+    width: 100%;
+  }
+  .animals .container .stuffed .mega {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+  }
+  .animals .container .stuffed .mega .cute {
+    width: 48%;
+  }
+  .animals .container .stuffed .mega .cute img {
+    width: 170px;
+  }
+  .animals .container .stuffed .mega .cute:hover {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */
