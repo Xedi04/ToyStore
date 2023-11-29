@@ -11,12 +11,18 @@
   padding: 0 32px;
 }
 
-#green {
+#nav {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+}
+#nav #green {
   width: 100%;
   background-color: #a5c926;
   color: white;
 }
-#green .green-1 {
+#nav #green .green-1 {
   width: 100%;
   display: flex;
   align-items: center;
@@ -25,43 +31,36 @@
   justify-content: space-between;
   padding: 7px 0;
 }
-#green .green-1 .green-2 {
+#nav #green .green-1 .green-2 {
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
 }
-#green .green-1 .green-2 p {
+#nav #green .green-1 .green-2 p {
   font-size: 12px;
 }
-#green .green-1 .green-2 p a {
+#nav #green .green-1 .green-2 p a {
   color: white;
 }
-#green .green-1 ul {
+#nav #green .green-1 ul {
   width: 13%;
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-#green .green-1 ul li {
+#nav #green .green-1 ul li {
   border-radius: 50%;
 }
-#green .green-1 ul li i {
+#nav #green .green-1 ul li i {
   font-size: 13px;
   padding: 6px;
 }
-#green .green-1 ul li i:hover {
+#nav #green .green-1 ul li i:hover {
   border-radius: 50%;
   background-color: #8fa054;
-}
-
-#nav {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  z-index: 1000;
 }
 #nav .navbar {
   width: 100%;

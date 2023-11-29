@@ -16,6 +16,7 @@ function nvbr() {
         padding.style.padding = "10px 0"
         pEl.style.color = "white"
         list.style.color = "white"
+        green.style.display="none"
         aEl.forEach((a) => {
             a.style.color = "white"
         })
@@ -31,6 +32,7 @@ function nvbr() {
         pEl.style.color = ""
         list.style.color = ""
         navbar.style.top = ""
+        green.style.display=""
         aEl.forEach((a) => {
             a.style.color = ""
         })
@@ -50,5 +52,6 @@ let firstDiv=document.querySelector("#first");
 
 
 mouse.addEventListener("click", ()=>{
-    firstDiv.scrollIntoView({behavior:'smooth'})
+    
+   firstDiv.scrollHeight({behavior:'smooth'});
 })

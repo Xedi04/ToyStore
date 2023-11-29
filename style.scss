@@ -16,6 +16,16 @@
 
 //yasil-navbar
 
+
+//navbar
+
+#nav {
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    z-index: 1000;
+
+    
 #green {
     width: 100%;
     background-color: $green;
@@ -61,15 +71,6 @@
         }
     }
 }
-
-//navbar
-
-#nav {
-    width: 100%;
-    background-color: $white;
-    position: fixed;
-    z-index: 1000;
-
     .navbar {
         @include mini;
         padding: 20px 0;
