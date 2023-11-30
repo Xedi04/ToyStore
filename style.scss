@@ -107,8 +107,9 @@
             width: 12%;
             @include flex;
             gap: 20px;
+            cursor: pointer;
 
-            p {
+            #p1 {
                 font-size: 17px;
             }
 
@@ -125,28 +126,89 @@
                 display: none;
             }
 
-    
+
         }
 
     }
+
     .panel {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        padding:40px 20px;
+        padding: 40px 20px;
         background-color: white;
         overflow: hidden;
-       .ii{
-        border-bottom: 1px solid $green;
-        p{
-            font-size: 18px;
+
+        .ii {
+            border-bottom: 1px solid $green;
+
+            p {
+                font-size: 18px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
-       }
     }
 
     .n {
         display: none;
+    }
+}
+
+
+//MODAL
+
+.click {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 2000;
+
+    .modal {
+        width: 480px;
+        height: 320px;
+        background-color: white;
+        border-radius: 20px;
+
+        .cart-a {
+            display: flex;
+            justify-content: space-around;
+            gap: 200px;
+            align-items: center;
+            height: 28%;
+
+            h3 {
+                font-family: $h4;
+                font-size: 25px;
+                color: $black;
+            }
+
+            i {
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+
+        hr {
+            background-color: $black;
+        }
+
+        .item {
+            @include flex;
+            height: 72%;
+            font-family: $h4;
+            font-size: 16px;
+        }
     }
 }
 
@@ -208,7 +270,6 @@
     }
 }
 
-// MODAL CLICK
 
 // IKINCI SECTION 
 
@@ -301,62 +362,71 @@
 //UCUNCU SECTION 
 
 
-.animals{
+.animals {
     width: 100%;
-    .stuffed{
+
+    .stuffed {
         @include mini;
         flex-direction: column;
         gap: 50px;
         padding: 100px 0;
-        .anml-1{
+
+        .anml-1 {
             width: 100%;
             @include flex;
             justify-content: space-between;
+
             h2 {
                 font-size: 28px;
                 font-family: $h4;
                 font-weight: 400;
             }
-            .see{
+
+            .see {
                 font-size: 13px;
-               text-align: center;
-               border-bottom: 2px solid rgb(223, 220, 220);
-               cursor: pointer;
-               font-family: $h4;
-               &:hover{
-                border-bottom: 2px solid $green;
-               }
+                text-align: center;
+                border-bottom: 2px solid rgb(223, 220, 220);
+                cursor: pointer;
+                font-family: $h4;
+
+                &:hover {
+                    border-bottom: 2px solid $green;
+                }
             }
         }
-        .teddy{
+
+        .teddy {
             width: 100%;
-            background-color:rgb(223, 220, 220);
-            .bear{
+            background-color: rgb(223, 220, 220);
+
+            .bear {
                 width: 15%;
                 height: 2px;
                 background-color: $green;
             }
         }
-        .mega{
+
+        .mega {
             width: 100%;
             @include flex;
             justify-content: space-between;
 
-            .cute{
+            .cute {
                 width: 23%;
-                background-color:rgb(233, 239, 239);
+                background-color: rgb(233, 239, 239);
                 @include flex;
                 flex-direction: column;
                 padding: 20px 0;
                 border-radius: 20px;
                 gap: 30px;
-                transition: transform 0.9s ease;
-              
-                img{
+                transition: transform 0.5s ease;
+                cursor: pointer;
+
+                img {
                     width: 170px;
                 }
-              
-                .price{
+
+                .price {
                     width: 100px;
                     background-color: $green;
                     font-size: 14px;
@@ -365,8 +435,9 @@
                     text-align: center;
                     border-radius: 30px;
                 }
-                &:hover{
-                    transform:scale(1.1) ;
+
+                &:hover {
+                    transform: scale(1.05);
                     box-shadow: 0 0 5px 1px rgb(208, 207, 207);
                 }
             }
@@ -374,6 +445,442 @@
     }
 }
 
+
+//DORDUNCU SECTION 
+
+
+.happy {
+    width: 100%;
+
+    .flower {
+        @include mini;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+
+        .flower-1 {
+            width: 100%;
+            @include flex;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 28px;
+                font-family: $h4;
+                font-weight: 400;
+            }
+
+            .see1 {
+                font-size: 13px;
+                text-align: center;
+                border-bottom: 2px solid rgb(223, 220, 220);
+                cursor: pointer;
+                font-family: $h4;
+
+                &:hover {
+                    border-bottom: 2px solid $green;
+                }
+            }
+        }
+
+        .lift {
+            width: 100%;
+            background-color: rgb(223, 220, 220);
+
+            .machine {
+                width: 15%;
+                height: 2px;
+                background-color: $green;
+            }
+        }
+
+        .camera {
+            width: 100%;
+            @include flex;
+            justify-content: space-between;
+
+            .cute1 {
+                width: 23%;
+                background-color: rgb(233, 239, 239);
+                @include flex;
+                flex-direction: column;
+                padding: 20px 0;
+                border-radius: 20px;
+                gap: 30px;
+                transition: transform 0.5s ease;
+                cursor: pointer;
+
+                img {
+                    width: 170px;
+                }
+
+                .price1 {
+                    width: 100px;
+                    background-color: $green;
+                    font-size: 14px;
+                    color: $white;
+                    padding: 4px;
+                    text-align: center;
+                    border-radius: 30px;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 5px 1px rgb(208, 207, 207);
+                }
+            }
+        }
+    }
+}
+
+//BESINCI SECTION 
+
+
+.photo {
+    width: 100%;
+    background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baf3d57ace69c149bb331b8_tim-gouw-165547-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .watch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0;
+
+        .watch-center {
+            width: 50%;
+            color: $white;
+            @include flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+
+            h6 {
+                font-size: 14px;
+                font-family: $h4;
+            }
+
+            h3 {
+                font-size: 36px;
+                line-height: 44px;
+                font-family: $h4;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $p;
+            }
+
+            .daire {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: $green;
+                @include flex;
+                cursor: pointer;
+
+                i {
+                    font-size: 30px;
+                    color: white;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: all .5s ease;
+                }
+
+            }
+        }
+    }
+}
+
+
+//ALTINCI SECTION 
+
+.simple {
+    width: 100%;
+
+    .color {
+        @include mini;
+        flex-direction: column;
+        gap: 100px;
+        padding: 100px 0;
+
+        .color-head {
+            width: 40%;
+            @include flex;
+            flex-direction: column;
+            text-align: center;
+
+            h6 {
+                font-size: 14px;
+                color: $green;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 36px;
+                font-weight: 400;
+            }
+        }
+
+        .aviable {
+            @include mini;
+
+            .text {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                padding-right: 100px;
+
+                h2 {
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 400;
+                }
+
+                .xett {
+                    width: 70px;
+                    height: 2px;
+                    background-color: $green;
+                }
+
+                p {
+                    color: grey;
+                    font-family: $p;
+                    font-size: 15px;
+                }
+
+                button {
+                    @include Button;
+                    width: 150px;
+                }
+            }
+
+            .text-img {
+                width: 48%;
+                border-radius: 30px;
+
+                img {
+                    width: 100%;
+                    border-radius: 30px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .sub {
+            width: 100%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: aliceblue;
+            padding: 50px;
+
+            .sub-1 {
+                width: 45%;
+                display: flex;
+                gap: 20px;
+
+                .sub-icon {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: $green;
+                    @include flex;
+
+                    i {
+                        font-size: 40px;
+
+                    }
+                }
+
+                .sub-text {
+                    h6 {
+                        font-size: 28px;
+                        line-height: 36px;
+                        font-weight: 400;
+                    }
+
+                }
+            }
+
+            .sub-2 {
+                width: 45%;
+                @include flex;
+                justify-content: space-between;
+
+                button {
+                    @include Button;
+                }
+
+                input {
+                    width: 70%;
+                    padding: 10px;
+                    border-radius: 20px;
+                    border: 2px solid $green;
+                }
+
+            }
+        }
+    }
+}
+
+//YEDDINCI SECTION
+
+.instagram {
+    width: 100%;
+
+    .insta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+
+        .insta-head {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            h6 {
+                font-size: 14px;
+                color: $green;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 36px;
+                font-weight: 400;
+                font-family: $h4;
+            }
+        }
+
+        .insta-img {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .img6 {
+                width: 15.8%;
+                border-radius: 20px;
+                transition: all .5s ease;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+        }
+
+        button {
+            @include Button;
+        }
+    }
+}
+
+
+//FOOTER 
+
+
+footer {
+    width: 100%;
+    background-color: $green;
+
+    .end-1 {
+        @include mini;
+        color: $white;
+        padding: 30px 0;
+
+        .son {
+            h4 {
+                font-size: 23px;
+                font-family: $h4;
+                font-weight: 400;
+            }
+        }
+
+        .son-text {
+            width: 30%;
+            @include flex;
+            justify-content: space-between;
+
+            a {
+                color: $white;
+                text-decoration: none;
+                font-size: 15px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        ul {
+            width: 12%;
+            @include flex;
+            gap: 20px;
+            list-style: none;
+
+            li {
+                border-radius: 50%;
+
+                i {
+                    font-size: 15px;
+                    padding: 6px;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-radius: 50%;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    .end-2 {
+        @include mini;
+        color: $white;
+        font-size: 13px;
+        padding: 30px 0;
+
+        .son-p {
+            display: flex;
+            gap: 3px;
+
+            a {
+                color: $white;
+            }
+        }
+
+        .son-a {
+            display: flex;
+            gap: 3px;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
 
 //media - 990px
 
@@ -498,26 +1005,200 @@
 
     //UCUNCU SECTION 
 
-    .animals{
+    .animals {
         width: 100%;
-        .container{
+
+        .container {
             padding: 0 20px;
-            .stuffed{
+
+            .stuffed {
                 width: 100%;
-                .mega{
+
+                .mega {
                     width: 100%;
                     flex-wrap: wrap;
                     gap: 30px;
                     padding: 0 20px;
-                    .cute{
+
+                    .cute {
                         width: 47.8%;
-                        img{
+
+                        img {
                             width: 270px;
                         }
-                        &:hover{
+
+                        &:hover {
                             transform: scale(1);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    //DORDUNCU SECTION
+
+    .happy {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .flower {
+                width: 100%;
+
+                .camera {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    padding: 0 20px;
+
+                    .cute1 {
+                        width: 47.8%;
+
+                        img {
+                            width: 270px;
+                        }
+
+                        &:hover {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //BESINCI SECTION
+
+    .photo {
+        width: 100%;
+
+        .container {
+            .watch {
+                width: 100%;
+
+                .watch-center {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    //ALTINCI SECTION
+
+    .simple {
+        width: 100%;
+
+        .color {
+            width: 100%;
+
+            .color-head {
+                width: 70%;
+                gap: 20px;
+            }
+
+            .aviable {
+                flex-direction: column-reverse;
+                gap: 50px;
+
+                .text-img {
+                    width: 80%;
+                }
+
+                .text {
+                    width: 80%;
+                    @include flex;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            .sub {
+                width: 70%;
+                flex-direction: column;
+                @include flex;
+                gap: 20px;
+
+                .sub-1 {
+                    flex-direction: column;
+                    width: 70%;
+                    @include flex;
+                    padding: 0;
+
+                    .sub-text {
+                        @include flex;
+                        text-align: center;
+                    }
+                }
+
+                .sub-2 {
+                    flex-direction: column;
+                    width: 90%;
+                    gap: 20px;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //YEDDINCI SECTION
+    .instagram {
+        width: 100%;
+
+        .container {
+            .insta {
+                width: 100%;
+
+                .insta-head {
+                    width: 50%;
+                }
+
+                .insta-img {
+                    width: 80%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .img6 {
+                        width: 32%;
+                    }
+                }
+            }
+        }
+    }
+
+    //FOOTER 
+
+    footer {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .end-1 {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                .son {
+                    width: 45%;
+                }
+
+                .son-text {
+                    width: 45%;
+                }
+
+                ul {
+                    width: 100%;
+                    gap: 10px;
+                    justify-content: flex-end;
                 }
             }
         }
@@ -632,26 +1313,207 @@
 
     //UCUNCU SECTION 
 
-    .animals{
+    .animals {
         width: 100%;
-        .container{
+
+        .container {
             padding: 0 20px;
-            .stuffed{
+
+            .stuffed {
                 width: 100%;
-                .mega{
+
+                .mega {
                     width: 100%;
                     flex-wrap: wrap;
                     gap: 10px;
-                    padding: 0 ;
-                    .cute{
+                    padding: 0;
+
+                    .cute {
                         width: 49%;
-                        img{
+
+                        img {
                             width: 270px;
                         }
-                        &:hover{
+
+                        &:hover {
                             transform: scale(1);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    //DORDUNCU SECTION 
+
+    .happy {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .flower {
+                width: 100%;
+
+                .camera {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0;
+
+                    .cute1 {
+                        width: 49%;
+
+                        img {
+                            width: 270px;
+                        }
+
+                        &:hover {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //BESINCI SECTION
+
+    .photo {
+        width: 100%;
+
+        .container {
+            .watch {
+                width: 100%;
+
+                .watch-center {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    //ALTINCI SECTION
+
+    .simple {
+        width: 100%;
+
+        .color {
+            width: 100%;
+
+            .color-head {
+                width: 80%;
+                gap: 20px;
+            }
+
+            .aviable {
+                flex-direction: column-reverse;
+                gap: 50px;
+
+                .text-img {
+                    width: 90%;
+                }
+
+                .text {
+                    width: 90%;
+                    @include flex;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            .sub {
+                width: 90%;
+                flex-direction: column;
+                @include flex;
+                gap: 20px;
+
+                .sub-1 {
+                    flex-direction: column;
+                    width: 70%;
+                    @include flex;
+                    padding: 0;
+
+                    .sub-text {
+                        @include flex;
+                        text-align: center;
+                    }
+                }
+
+                .sub-2 {
+                    flex-direction: column;
+                    width: 90%;
+                    gap: 20px;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //YEDDINCI SECTION
+
+    .instagram {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .insta {
+                width: 100%;
+
+                .insta-head {
+                    width: 100%;
+                }
+
+                .insta-img {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .img6 {
+                        width: 32%;
+                    }
+                }
+            }
+        }
+    }
+
+    //FOOTER
+
+    footer {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .end-1 {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                .son {
+                    width: 45%;
+                }
+
+                .son-text {
+                    width: 45%;
+
+                    a {
+                        font-size: 13px;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    gap: 10px;
+                    justify-content: flex-end;
                 }
             }
         }
@@ -714,7 +1576,7 @@
         width: 100%;
 
         .container {
-            padding: 0 40px;
+            padding: 0 20px;
 
             .open-1 {
                 width: 100%;
@@ -737,7 +1599,7 @@
         width: 100%;
 
         .container {
-            padding: 0 40px;
+            padding: 0 20px;
             @include flex;
 
             .wood {
@@ -777,25 +1639,176 @@
 
     //UCUNCU SECTION 
 
-    .animals{
+    .animals {
         width: 100%;
-        .container{
+
+        .container {
             padding: 0 20px;
-            .stuffed{
+
+            .stuffed {
                 width: 100%;
-                .mega{
+
+                .mega {
                     width: 100%;
                     flex-wrap: wrap;
                     gap: 10px;
-                    padding: 0 ;
-                    .cute{
+                    padding: 0;
+
+                    .cute {
                         width: 48%;
-                        img{
+
+                        img {
                             width: 170px;
                         }
-                        &:hover{
+
+                        &:hover {
                             transform: scale(1);
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    //DORDUNCU SECTION 
+
+    .happy {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .flower {
+                width: 100%;
+
+                .camera {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0;
+
+                    .cute1 {
+                        width: 48%;
+
+                        img {
+                            width: 170px;
+                        }
+
+                        &:hover {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //BESINCI SECTION  
+    .photo {
+        width: 100%;
+
+        .container {
+            .watch {
+                width: 100%;
+                padding: 50px 0;
+
+                .watch-center {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    //ALTINCI SECTION
+
+    .simple {
+        width: 100%;
+
+        .color {
+            width: 100%;
+
+            .color-head {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .aviable {
+                flex-direction: column-reverse;
+                gap: 50px;
+
+                .text-img {
+                    width: 90%;
+                }
+
+                .text {
+                    width: 90%;
+                    @include flex;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            .sub {
+                width: 90%;
+                flex-direction: column;
+                @include flex;
+                gap: 20px;
+
+                .sub-1 {
+                    flex-direction: column;
+                    width: 70%;
+                    @include flex;
+                    padding: 0;
+
+                    .sub-text {
+                        @include flex;
+                        text-align: center;
+
+                        h6 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+
+                .sub-2 {
+                    flex-direction: column;
+                    width: 90%;
+                    gap: 20px;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //YEDDINCI SECTION
+    .instagram {
+        width: 100%;
+
+        .container {
+            padding: 0 20px;
+
+            .insta {
+                width: 100%;
+
+                .insta-head {
+                    width: 100%;
+                }
+
+                .insta-img {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .img6 {
+                        width: 31.8%;
                     }
                 }
             }

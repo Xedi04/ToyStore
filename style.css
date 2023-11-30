@@ -103,8 +103,9 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  cursor: pointer;
 }
-#nav .navbar .cart p {
+#nav .navbar .cart #p1 {
   font-size: 17px;
 }
 #nav .navbar .cart i {
@@ -130,9 +131,59 @@
 }
 #nav .panel .ii p {
   font-size: 18px;
+  cursor: pointer;
+}
+#nav .panel .ii p:hover {
+  text-decoration: underline;
 }
 #nav .n {
   display: none;
+}
+
+.click {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+}
+.click .modal {
+  width: 480px;
+  height: 320px;
+  background-color: white;
+  border-radius: 20px;
+}
+.click .modal .cart-a {
+  display: flex;
+  justify-content: space-around;
+  gap: 200px;
+  align-items: center;
+  height: 28%;
+}
+.click .modal .cart-a h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px;
+  color: black;
+}
+.click .modal .cart-a i {
+  font-size: 18px;
+  cursor: pointer;
+}
+.click .modal hr {
+  background-color: black;
+}
+.click .modal .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72%;
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
 }
 
 #open {
@@ -183,6 +234,7 @@
   text-align: center;
   border: 0;
   transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
 }
 #open .open-1 .hello #catalog:hover {
   box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
@@ -249,6 +301,7 @@
   text-align: center;
   border: 0;
   transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
   background-color: white;
   color: black;
   width: 120px;
@@ -296,6 +349,7 @@
   text-align: center;
   border: 0;
   transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
   background-color: white;
   color: black;
   width: 120px;
@@ -368,7 +422,8 @@
   padding: 20px 0;
   border-radius: 20px;
   gap: 30px;
-  transition: transform 0.9s ease;
+  transition: transform 0.5s ease;
+  cursor: pointer;
 }
 .animals .stuffed .mega .cute img {
   width: 170px;
@@ -383,8 +438,441 @@
   border-radius: 30px;
 }
 .animals .stuffed .mega .cute:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 0 5px 1px rgb(208, 207, 207);
+}
+
+.happy {
+  width: 100%;
+}
+.happy .flower {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 0;
+}
+.happy .flower .flower-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.happy .flower .flower-1 h2 {
+  font-size: 28px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+}
+.happy .flower .flower-1 .see1 {
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 2px solid rgb(223, 220, 220);
+  cursor: pointer;
+  font-family: "Varela Round", sans-serif;
+}
+.happy .flower .flower-1 .see1:hover {
+  border-bottom: 2px solid #a5c926;
+}
+.happy .flower .lift {
+  width: 100%;
+  background-color: rgb(223, 220, 220);
+}
+.happy .flower .lift .machine {
+  width: 15%;
+  height: 2px;
+  background-color: #a5c926;
+}
+.happy .flower .camera {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.happy .flower .camera .cute1 {
+  width: 23%;
+  background-color: rgb(233, 239, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+  border-radius: 20px;
+  gap: 30px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.happy .flower .camera .cute1 img {
+  width: 170px;
+}
+.happy .flower .camera .cute1 .price1 {
+  width: 100px;
+  background-color: #a5c926;
+  font-size: 14px;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  border-radius: 30px;
+}
+.happy .flower .camera .cute1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 1px rgb(208, 207, 207);
+}
+
+.photo {
+  width: 100%;
+  background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baf3d57ace69c149bb331b8_tim-gouw-165547-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.photo .watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+.photo .watch .watch-center {
+  width: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.photo .watch .watch-center h6 {
+  font-size: 14px;
+  font-family: "Varela Round", sans-serif;
+}
+.photo .watch .watch-center h3 {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+}
+.photo .watch .watch-center p {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+.photo .watch .watch-center .daire {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #a5c926;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.photo .watch .watch-center .daire i {
+  font-size: 30px;
+  color: white;
+}
+.photo .watch .watch-center .daire:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.simple {
+  width: 100%;
+}
+.simple .color {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 100px;
+  padding: 100px 0;
+}
+.simple .color .color-head {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.simple .color .color-head h6 {
+  font-size: 14px;
+  color: #a5c926;
+}
+.simple .color .color-head h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.simple .color .aviable {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.simple .color .aviable .text {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-right: 100px;
+}
+.simple .color .aviable .text h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.simple .color .aviable .text .xett {
+  width: 70px;
+  height: 2px;
+  background-color: #a5c926;
+}
+.simple .color .aviable .text p {
+  color: grey;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+.simple .color .aviable .text button {
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
+  width: 150px;
+}
+.simple .color .aviable .text button:hover {
+  box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
+  transform: scale(1.05);
+}
+.simple .color .aviable .text-img {
+  width: 48%;
+  border-radius: 30px;
+}
+.simple .color .aviable .text-img img {
+  width: 100%;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.simple .color .sub {
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 50px;
+}
+.simple .color .sub .sub-1 {
+  width: 45%;
+  display: flex;
+  gap: 20px;
+}
+.simple .color .sub .sub-1 .sub-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #a5c926;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.simple .color .sub .sub-1 .sub-icon i {
+  font-size: 40px;
+}
+.simple .color .sub .sub-1 .sub-text h6 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.simple .color .sub .sub-2 {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.simple .color .sub .sub-2 button {
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
+}
+.simple .color .sub .sub-2 button:hover {
+  box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
+  transform: scale(1.05);
+}
+.simple .color .sub .sub-2 input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #a5c926;
+}
+
+.instagram {
+  width: 100%;
+}
+.instagram .insta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 0;
+}
+.instagram .insta .insta-head {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.instagram .insta .insta-head h6 {
+  font-size: 14px;
+  color: #a5c926;
+}
+.instagram .insta .insta-head h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  font-family: "Varela Round", sans-serif;
+}
+.instagram .insta .insta-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.instagram .insta .insta-img .img6 {
+  width: 15.8%;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.instagram .insta .insta-img .img6 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.instagram .insta .insta-img .img6:hover {
+  transform: scale(1.05);
+}
+.instagram .insta button {
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 24px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
+}
+.instagram .insta button:hover {
+  box-shadow: 0 8px 8px -4px rgba(165, 201, 38, 0.5);
+  transform: scale(1.05);
+}
+
+footer {
+  width: 100%;
+  background-color: #a5c926;
+}
+footer .end-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 0;
+}
+footer .end-1 .son h4 {
+  font-size: 23px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+}
+footer .end-1 .son-text {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+footer .end-1 .son-text a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+footer .end-1 .son-text a:hover {
+  text-decoration: underline;
+}
+footer .end-1 ul {
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+footer .end-1 ul li {
+  border-radius: 50%;
+}
+footer .end-1 ul li i {
+  font-size: 15px;
+  padding: 6px;
+  cursor: pointer;
+}
+footer .end-1 ul li i:hover {
+  border-radius: 50%;
+}
+footer .end-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 13px;
+  padding: 30px 0;
+}
+footer .end-2 .son-p {
+  display: flex;
+  gap: 3px;
+}
+footer .end-2 .son-p a {
+  color: white;
+}
+footer .end-2 .son-a {
+  display: flex;
+  gap: 3px;
+}
+footer .end-2 .son-a a {
+  color: white;
 }
 
 @media screen and (max-width: 990px) {
@@ -497,6 +985,136 @@
   .animals .container .stuffed .mega .cute:hover {
     transform: scale(1);
   }
+  .happy {
+    width: 100%;
+  }
+  .happy .container {
+    padding: 0 20px;
+  }
+  .happy .container .flower {
+    width: 100%;
+  }
+  .happy .container .flower .camera {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .happy .container .flower .camera .cute1 {
+    width: 47.8%;
+  }
+  .happy .container .flower .camera .cute1 img {
+    width: 270px;
+  }
+  .happy .container .flower .camera .cute1:hover {
+    transform: scale(1);
+  }
+  .photo {
+    width: 100%;
+  }
+  .photo .container .watch {
+    width: 100%;
+  }
+  .photo .container .watch .watch-center {
+    width: 80%;
+  }
+  .simple {
+    width: 100%;
+  }
+  .simple .color {
+    width: 100%;
+  }
+  .simple .color .color-head {
+    width: 70%;
+    gap: 20px;
+  }
+  .simple .color .aviable {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .simple .color .aviable .text-img {
+    width: 80%;
+  }
+  .simple .color .aviable .text {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .simple .color .sub {
+    width: 70%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-1 {
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .simple .color .sub .sub-1 .sub-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .simple .color .sub .sub-2 {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-2 input {
+    width: 100%;
+  }
+  .simple .color .sub .sub-2 button {
+    width: 100%;
+  }
+  .instagram {
+    width: 100%;
+  }
+  .instagram .container .insta {
+    width: 100%;
+  }
+  .instagram .container .insta .insta-head {
+    width: 50%;
+  }
+  .instagram .container .insta .insta-img {
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .instagram .container .insta .insta-img .img6 {
+    width: 32%;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .container {
+    padding: 0 20px;
+  }
+  footer .container .end-1 {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  footer .container .end-1 .son {
+    width: 45%;
+  }
+  footer .container .end-1 .son-text {
+    width: 45%;
+  }
+  footer .container .end-1 ul {
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 760px) {
   #nav {
@@ -599,6 +1217,142 @@
   .animals .container .stuffed .mega .cute:hover {
     transform: scale(1);
   }
+  .happy {
+    width: 100%;
+  }
+  .happy .container {
+    padding: 0 20px;
+  }
+  .happy .container .flower {
+    width: 100%;
+  }
+  .happy .container .flower .camera {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+  }
+  .happy .container .flower .camera .cute1 {
+    width: 49%;
+  }
+  .happy .container .flower .camera .cute1 img {
+    width: 270px;
+  }
+  .happy .container .flower .camera .cute1:hover {
+    transform: scale(1);
+  }
+  .photo {
+    width: 100%;
+  }
+  .photo .container .watch {
+    width: 100%;
+  }
+  .photo .container .watch .watch-center {
+    width: 80%;
+  }
+  .simple {
+    width: 100%;
+  }
+  .simple .color {
+    width: 100%;
+  }
+  .simple .color .color-head {
+    width: 80%;
+    gap: 20px;
+  }
+  .simple .color .aviable {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .simple .color .aviable .text-img {
+    width: 90%;
+  }
+  .simple .color .aviable .text {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .simple .color .sub {
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-1 {
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .simple .color .sub .sub-1 .sub-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .simple .color .sub .sub-2 {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-2 input {
+    width: 100%;
+  }
+  .simple .color .sub .sub-2 button {
+    width: 100%;
+  }
+  .instagram {
+    width: 100%;
+  }
+  .instagram .container {
+    padding: 0 20px;
+  }
+  .instagram .container .insta {
+    width: 100%;
+  }
+  .instagram .container .insta .insta-head {
+    width: 100%;
+  }
+  .instagram .container .insta .insta-img {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .instagram .container .insta .insta-img .img6 {
+    width: 32%;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .container {
+    padding: 0 20px;
+  }
+  footer .container .end-1 {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  footer .container .end-1 .son {
+    width: 45%;
+  }
+  footer .container .end-1 .son-text {
+    width: 45%;
+  }
+  footer .container .end-1 .son-text a {
+    font-size: 13px;
+  }
+  footer .container .end-1 ul {
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 576px) {
   #nav {
@@ -636,7 +1390,7 @@
     width: 100%;
   }
   #open .container {
-    padding: 0 40px;
+    padding: 0 20px;
   }
   #open .container .open-1 {
     width: 100%;
@@ -652,7 +1406,7 @@
     width: 100%;
   }
   #toys .container {
-    padding: 0 40px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -703,5 +1457,120 @@
   }
   .animals .container .stuffed .mega .cute:hover {
     transform: scale(1);
+  }
+  .happy {
+    width: 100%;
+  }
+  .happy .container {
+    padding: 0 20px;
+  }
+  .happy .container .flower {
+    width: 100%;
+  }
+  .happy .container .flower .camera {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+  }
+  .happy .container .flower .camera .cute1 {
+    width: 48%;
+  }
+  .happy .container .flower .camera .cute1 img {
+    width: 170px;
+  }
+  .happy .container .flower .camera .cute1:hover {
+    transform: scale(1);
+  }
+  .photo {
+    width: 100%;
+  }
+  .photo .container .watch {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .photo .container .watch .watch-center {
+    width: 90%;
+  }
+  .simple {
+    width: 100%;
+  }
+  .simple .color {
+    width: 100%;
+  }
+  .simple .color .color-head {
+    width: 100%;
+    gap: 20px;
+  }
+  .simple .color .aviable {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .simple .color .aviable .text-img {
+    width: 90%;
+  }
+  .simple .color .aviable .text {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .simple .color .sub {
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-1 {
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .simple .color .sub .sub-1 .sub-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .simple .color .sub .sub-1 .sub-text h6 {
+    font-size: 25px;
+  }
+  .simple .color .sub .sub-2 {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+  .simple .color .sub .sub-2 input {
+    width: 100%;
+  }
+  .simple .color .sub .sub-2 button {
+    width: 100%;
+  }
+  .instagram {
+    width: 100%;
+  }
+  .instagram .container {
+    padding: 0 20px;
+  }
+  .instagram .container .insta {
+    width: 100%;
+  }
+  .instagram .container .insta .insta-head {
+    width: 100%;
+  }
+  .instagram .container .insta .insta-img {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .instagram .container .insta .insta-img .img6 {
+    width: 31.8%;
   }
 }/*# sourceMappingURL=style.css.map */
